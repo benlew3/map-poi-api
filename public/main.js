@@ -23,7 +23,7 @@
   //   });
   // }
 
-  function initMap() {
+function initMap() {
  var map = new google.maps.Map(document.getElementById('map'), {
    center: {lat: -34.397, lng: 150.644},
    zoom: 6
@@ -49,14 +49,15 @@
    handleLocationError(false, infoWindow, map.getCenter());
  }
 
-   // Create a <script> tag and set the USGS URL as the source.
-    var script = document.createElement('script');
-    // (In this example we use a locally stored copy instead.)
-    // script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
-    script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+  // Create a <script> tag and set the USGS URL as the source.
+  var script = document.createElement('script');
+  // (In this example we use a locally stored copy instead.)
+  // script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+  script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
+  document.getElementsByTagName('head')[0].appendChild(script);
 }
+
+
 window.eqfeed_callback = function(results) {
         for (var i = 0; i < results.features.length; i++) {
           var coords = results.features[i].geometry.coordinates;
