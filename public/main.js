@@ -1,5 +1,3 @@
-//google maps api key : AIzaSyCb-7dyOecp8Y_ZQsqqY6PY6fbLLEc6XCk
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyBAbgpJgr0A09hZRgK6qJgW-2i4rKjokDY",
@@ -10,18 +8,6 @@ var config = {
 };
 
 firebase.initializeApp(config);
-
-// function initMap() {
-//   var uluru = {lat: -25.363, lng: 131.044};
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 4,
-//     center: uluru
-//   });
-//   var marker = new google.maps.Marker({
-//     position: uluru,
-//     map: map
-//   });
-// }
 
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -78,4 +64,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setContent(browserHasGeolocation ?
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
-}
+};
+
+function eqfeed_callback(response) {
+  map.data.addGeoJson(response);
+};
