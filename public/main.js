@@ -65,9 +65,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setContent(browserHasGeolocation ?
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
-};
+}
 
 function eqfeed_callback(response) {
-  console.log('poop')
+  console.log('poop');
   console.log(map.data.loadGeoJson(response));
-};
+}
