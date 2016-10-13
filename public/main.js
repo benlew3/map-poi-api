@@ -71,6 +71,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function eqfeed_callback(response) {
   console.log(response)
-  // console.log(response.map.data);
-  // console.log(map.data.addGeoJson('data.json'));
+  //console.log(response.map.data);
+  map.data.addGeoJson(response);
+  console.log("got here cb");
+  //console.log(map.data.addGeoJson(response));
 }
