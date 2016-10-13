@@ -6,11 +6,12 @@ var config = {
   storageBucket: "gs://map-poi-api.appspot.com",
   messagingSenderId: "108082024426"
 };
+var map;
 
 firebase.initializeApp(config);
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: -34.397,
       lng: 150.644
