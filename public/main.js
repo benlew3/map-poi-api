@@ -60,6 +60,8 @@ window.eqfeed_callback = function(results) {
   }
 };
 
+map.data.loadGeoJson('data.json');
+
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(browserHasGeolocation ?
