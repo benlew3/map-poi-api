@@ -48,7 +48,25 @@
    // Browser doesn't support Geolocation
    handleLocationError(false, infoWindow, map.getCenter());
  }
+
+   // Create a <script> tag and set the USGS URL as the source.
+    var script = document.createElement('script');
+    // (In this example we use a locally stored copy instead.)
+    // script.src = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp';
+    script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
 }
+window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        }
+      }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
  infoWindow.setPosition(pos);
