@@ -69,5 +69,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function eqfeed_callback(response) {
   console.log('poop');
-  console.log(map.data.loadGeoJson('data.json'));
+  console.log(map.data.addGeoJson('data.json'));
 }
