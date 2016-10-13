@@ -45,6 +45,8 @@ function initMap() {
   // (In this example we use a locally stored copy instead.)
   script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
   document.getElementsByTagName('head')[0].appendChild(script);
+
+  map.data.loadGeoJson('data.json');
 }
 
 window.eqfeed_callback = function(results) {
