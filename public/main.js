@@ -66,5 +66,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 };
 
 function eqfeed_callback(response) {
-  map.data.addGeoJson(response);
+  console.log(map.data.GeoJson(response));
 };
