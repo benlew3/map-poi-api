@@ -1,0 +1,9 @@
+how to start firebase
+
+npm install -g firebase-tools
+
+firebase init
+
+firebase deploy
+
+* have to redeploy after any changes to the code
