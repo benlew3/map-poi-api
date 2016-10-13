@@ -67,5 +67,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 };
 
 function eqfeed_callback(response) {
-  map.data.addGeoJson(response);
+  map.data.loadGeoJson('http://www.CORS-ENABLED-SITE.com/data.json');
 };
