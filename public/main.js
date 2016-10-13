@@ -69,5 +69,5 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function eqfeed_callback(response) {
   console.log('poop');
-  console.log(map.data.loadGeoJson('https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js'));
+  console.log(map.data.loadGeoJson('data.json'););
 }
