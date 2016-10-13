@@ -48,7 +48,9 @@ function initMap() {
 }
 
 window.eqfeed_callback = function(results) {
+  console.log("got here");
   for (var i = 0; i < results.features.length; i++) {
+    console.log("now here");
     var coords = results.features[i].geometry.coordinates;
     var latLng = new google.maps.LatLng(coords[1], coords[0]);
     var marker = new google.maps.Marker({
