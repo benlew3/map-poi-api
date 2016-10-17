@@ -23,7 +23,7 @@ function initMap() {
     map: map
   });
   var request = {
-    radius: '500'
+    radius: '5000'
   };
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
