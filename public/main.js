@@ -17,11 +17,14 @@ function initMap() {
       lng: 150.644
     },
     zoom: 12
+
   });
   var infoWindow = new google.maps.InfoWindow({
     map: map
   });
-
+  var request = {
+    radius: '500'
+  };
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
