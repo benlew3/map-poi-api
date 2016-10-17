@@ -22,7 +22,9 @@ function initMap() {
   var infoWindow = new google.maps.InfoWindow({
     map: map
   });
-
+  var request = {
+    radius: '5000'
+  };
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
