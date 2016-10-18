@@ -1,6 +1,6 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyBAbgpJgr0A09hZRgK6qJgW-2i4rKjokDY",
+  apiKey: "AIzaSyCb-7dyOecp8Y_ZQsqqY6PY6fbLLEc6XCk",
   authDomain: "map-poi-api.firebaseapp.com",
   databaseURL: "https://map-poi-api.firebaseio.com",
   storageBucket: "gs://map-poi-api.appspot.com",
